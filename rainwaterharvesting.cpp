@@ -17,7 +17,7 @@ int main(){
 	}
 	int water=0;
 	for(int i=0;i<n;i++){
-		min(rightmax[i],leftmax[i]-height[i]);
+		water=water+min(rightmax[i],leftmax[i])-height[i];
 		
 	}
 	cout<<water<<endl;
