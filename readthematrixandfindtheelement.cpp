@@ -23,13 +23,16 @@ int main(){
 	for( i=0;i<rows;i++){
 		for( j=0;j<cols;j++){
 			if(target==arr[i][j]){
-				cout<<"Target found at index"<<i<<" "<<j<<endl;
+				cout<<target<<"   Target found at index  " <<i<<" "<<j<<endl;
 				
 				
-				return 0;
+			//	return 0;
+				break;
 			}
 		}
-		cout<<endl;
+		if(j!=cols){
+			break;
+		}
 	}
 
 	if(i ==rows){
