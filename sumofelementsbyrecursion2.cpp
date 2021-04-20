@@ -39,6 +39,19 @@ int sum2(int *a,int n,int i)
 	
 	
 }
+int sum3(int *a,int n){
+	
+	//Base case
+	if(n==0){
+		return 0;
+	}
+	
+	
+	//Recursive case 
+	return sum3(a,n-1)+a[n-1];
+	
+	
+}
 int main(){
 	
 	int a[]={1,2,3,4,5,6};
@@ -49,7 +62,10 @@ int main(){
 	n=sizeof(b)/sizeof(int);
 	int x2=sum2(a,n,0);
 	cout<<"sum is"<<x2<<endl;
-	
+	int c[]={12,44,56,4};
+	n=sizeof(c)/sizeof(int);
+	int x3=sum3(c,n);
+	cout<<"Sum is "<<x3<<endl;
 	
 	return 0;
 }
