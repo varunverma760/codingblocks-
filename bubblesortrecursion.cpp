@@ -20,7 +20,23 @@ void bubblesortrecursion(int*arr,int n,int i){
 
 
 }
+void bubblesortrecursion2(int *arr,int n,int i,int j){
 
+	//Bae case 
+	if(i==n-1){
+		
+		return;
+	}
+	if(j==n-1-i){
+	bubblesortrecursion2(arr,n,i+1,0);
+	}
+	else{
+		if(arr[j]>arr[j+1]){
+			swap(arr[j],arr[j+1]);
+		}
+		bubblesortrecursion2(arr,n,i,j+1);
+	}
+}
 		
 		
 
@@ -36,8 +52,8 @@ int main(){
 		cin>>arr[i];
 	}
 
-	 bubblesortrecursion(arr,n,0);
-	//bubblesortrecursion2(arr,n,0,0);
+	// bubblesortrecursion(arr,n,0);
+	bubblesortrecursion2(arr,n,0,0);
 
 	for(int i=0;i<n;i++){
 		cout<<arr[i]<<" ";
